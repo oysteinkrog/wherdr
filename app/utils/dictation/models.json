@@ -10,14 +10,14 @@
       "set": "parakeet",
       "dir": "parakeet-tdt-0.6b-v3-int8",
       "files": [
-        { "path": "encoder.int8.onnx", "bytes": 652184281 },
-        { "path": "decoder.int8.onnx", "bytes": 11845275 },
+        { "path": "encoder.int8.onnx", "bytes": 652282294 },
+        { "path": "decoder.int8.onnx", "bytes": 11845274 },
         { "path": "joiner.int8.onnx", "bytes": 6355277 },
         { "path": "tokens.txt", "bytes": 93939 }
       ],
       "source": {
         "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8.tar.bz2",
-        "sha256": "5793d0fd397c5778d2cf2126994d58e9d56b1be7c04d13c7a15bb1b4eafb16bf"
+        "sha256": "1495e91b59d7fc53ddca91f3431758ec99f8fa253fdb0e1e851be0f72b14b0f9"
       },
       "languages": ["bg", "cs", "da", "de", "el", "en", "es", "et", "fi", "fr", "hr", "hu", "it", "lt", "lv", "mt", "nl", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "uk"],
       "ranked": ["it", "es", "pt", "en", "de", "fr", "ru", "uk", "pl", "nl", "sk", "cs", "ro", "hr", "bg", "fi", "sv", "hu", "et", "da", "lt", "mt", "el", "lv", "sl"],

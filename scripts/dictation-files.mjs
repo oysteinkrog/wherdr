@@ -102,7 +102,9 @@ export async function download(url, sha256, file, { fetchImpl = fetch, tries = 5
       await rename(part, file)
       return
     } catch (err) {
-      if (attempt >= tries) {
+      // A sha256 mismatch comes back the same on every try: stop at once
+      // instead of fetching the whole file again.
+      if (attempt >= tries || /sha256 mismatch/.test(err.message)) {
         // Said in plain words: how far a cut download got (its part is kept to resume).
         const why = /^HTTP |sha256 mismatch/.test(err.message) ? err.message : reached ? `the download was cut at ${mb(reached)}: ${err.message}` : `the download failed: ${err.message}`
         throw new Error(`${why} (${url})`)
